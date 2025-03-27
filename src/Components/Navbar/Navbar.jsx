@@ -1,11 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
-import search_icon from "../../assets/search_icon.svg";
 import bell_icon from "../../assets/bell_icon.svg";
-import profile_img from "../../assets/profile_img.png";
-import caret_icon from "../../assets/caret_icon.svg";
-import { logout } from "../../firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { FaSignOutAlt } from "react-icons/fa";
 import { Popover } from "antd";
@@ -78,7 +74,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-right">
-        <Search placeholder="input search text" enterButton />
+        <Search placeholder="Movie search" enterButton />
         <p>Intern</p>
         <Popover content={bell_content} title="">
           <img src={bell_icon} alt="" className="icon" />
